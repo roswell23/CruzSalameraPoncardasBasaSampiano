@@ -31,17 +31,6 @@ function Sidebar({ activeTab, setActiveTab }) {
             ))}
           </ul>
         </div>
-
-        {/* Quick Stats Section */}
-        <div className="bg-base-100 p-4 rounded-2xl border border-base-300 shadow-sm space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-success animate-pulse"></span>
-            <p className="text-xs font-bold text-base-content/70">Database Connection</p>
-          </div>
-          <p className="text-[11px] text-base-content/50 leading-relaxed">
-            Connected to CvSU local server. System is running in client UI prototype draft mode.
-          </p>
-        </div>
       </div>
 
       {/* User profile footer */}

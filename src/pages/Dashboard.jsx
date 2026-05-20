@@ -347,20 +347,6 @@ function Dashboard() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Project Info Widget */}
-                  <div className="card bg-base-100 shadow-sm border border-base-200 p-5 space-y-3">
-                    <h3 className="font-bold text-xs text-base-content/40 uppercase tracking-wider">Laboratory Submission Info</h3>
-                    <div className="text-xs space-y-2 text-base-content/75">
-                      <p><span className="font-bold">Subject:</span> DCIT 26 - Application Development</p>
-                      <p><span className="font-bold">Task:</span> Laboratory 5 – UI Draft Prototype</p>
-                      <p><span className="font-bold">Semester:</span> Second Semester, SY 2025-2026</p>
-                      <div className="divider my-1"></div>
-                      <p className="text-[10px] text-base-content/50 italic leading-relaxed">
-                        Formed under standard group structures. Represents an interactive React mockup of a Student Management System.
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
