@@ -49,7 +49,7 @@ function StudentDirectory({
 
         {/* Quick Info Box */}
         <div className="card bg-emerald-900/5 border border-emerald-900/10 p-5 rounded-2xl text-xs">
-          <h4 className="font-bold text-xs text-emerald-800 flex items-center gap-1.5">
+          <h4 className="font-bold text-xs text-success flex items-center gap-1.5">
             <span>💡</span> Form Operations Guide
           </h4>
           <ul className="text-[11px] text-base-content/65 list-disc pl-4 mt-2 space-y-1.5 leading-relaxed">

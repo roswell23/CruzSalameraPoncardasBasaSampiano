@@ -85,7 +85,7 @@ function SearchBar({
                 setFilterCourse('');
                 setFilterYear('');
               }}
-              className="btn btn-ghost btn-sm rounded-xl text-emerald-800 hover:bg-emerald-50 text-xs px-3.5 h-10 min-h-10 cursor-pointer font-semibold border border-dashed border-emerald-300 col-span-2 sm:col-span-1 w-full sm:w-auto"
+              className="btn btn-ghost btn-sm rounded-xl text-success hover:bg-success/10 text-xs px-3.5 h-10 min-h-10 cursor-pointer font-semibold border border-dashed border-success/30 col-span-2 sm:col-span-1 w-full sm:w-auto"
             >
               Reset Filters
             </button>

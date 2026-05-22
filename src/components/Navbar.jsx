@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Navbar() {
+function Navbar({ onLogout }) {
   const currentDate = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -17,7 +17,7 @@ function Navbar() {
             🏫
           </div>
           <div>
-            <h1 className="text-xs sm:text-sm md:text-md font-extrabold tracking-tight text-emerald-800 leading-none">
+            <h1 className="text-xs sm:text-sm md:text-md font-extrabold tracking-tight text-success leading-none">
               <span className="inline sm:hidden">CvSU PORTAL</span>
               <span className="hidden sm:inline">CAVITE STATE UNIVERSITY</span>
             </h1>
@@ -71,7 +71,7 @@ function Navbar() {
               <a className="py-2 hover:bg-base-200">⚙️ Settings</a>
             </li>
             <li className="mt-1 border-t border-base-200 pt-1">
-              <a className="py-2 text-error hover:bg-error/10 hover:text-error">🚪 Logout</a>
+              <a onClick={onLogout} className="py-2 text-error hover:bg-error/10 hover:text-error cursor-pointer">🚪 Logout</a>
             </li>
           </ul>
         </div>

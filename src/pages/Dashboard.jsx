@@ -10,7 +10,7 @@ import StudentDirectory from "./StudentDirectory";
 import CourseCatalog from "./CourseCatalog";
 import CvsuInfo from "./CvsuInfo";
 
-function Dashboard() {
+function Dashboard({ onLogout }) {
   // Global App State
   const [students, setStudents] = useState(() => {
     // Try to load from localStorage if available (or fall back to initial data)
@@ -111,7 +111,7 @@ function Dashboard() {
   return (
     <div className="h-screen bg-base-100 flex flex-col text-base-content antialiased overflow-hidden">
       {/* Top Header Navbar */}
-      <Navbar />
+      <Navbar onLogout={onLogout} />
 
       {/* Main Grid: Sidebar + Active Section */}
       <div className="flex flex-1 overflow-hidden">
@@ -122,7 +122,7 @@ function Dashboard() {
           <button
             onClick={() => setActiveTab("dashboard")}
             className={`flex flex-col items-center gap-0.5 text-[10px] font-bold ${
-              activeTab === "dashboard" ? "text-emerald-800" : "text-base-content/50"
+              activeTab === "dashboard" ? "text-success" : "text-base-content/50"
             }`}
           >
             <span>📊</span> Dashboard
@@ -130,7 +130,7 @@ function Dashboard() {
           <button
             onClick={() => setActiveTab("students")}
             className={`flex flex-col items-center gap-0.5 text-[10px] font-bold ${
-              activeTab === "students" ? "text-emerald-800" : "text-base-content/50"
+              activeTab === "students" ? "text-success" : "text-base-content/50"
             }`}
           >
             <span>👨‍🎓</span> Directory
@@ -138,7 +138,7 @@ function Dashboard() {
           <button
             onClick={() => setActiveTab("courses")}
             className={`flex flex-col items-center gap-0.5 text-[10px] font-bold ${
-              activeTab === "courses" ? "text-emerald-800" : "text-base-content/50"
+              activeTab === "courses" ? "text-success" : "text-base-content/50"
             }`}
           >
             <span>📚</span> Courses
@@ -146,7 +146,7 @@ function Dashboard() {
           <button
             onClick={() => setActiveTab("info")}
             className={`flex flex-col items-center gap-0.5 text-[10px] font-bold ${
-              activeTab === "info" ? "text-emerald-800" : "text-base-content/50"
+              activeTab === "info" ? "text-success" : "text-base-content/50"
             }`}
           >
             <span>🏫</span> Vision
@@ -198,12 +198,12 @@ function Dashboard() {
                   <div className="card bg-base-100 shadow-sm border border-base-200">
                     <div className="p-5 border-b border-base-200 flex justify-between items-center">
                       <div>
-                        <h3 className="font-bold text-sm text-emerald-800">Recent Student Admissions</h3>
+                        <h3 className="font-bold text-sm text-success">Recent Student Admissions</h3>
                         <p className="text-[10px] text-base-content/50">List of last 4 registered students in the system.</p>
                       </div>
                       <button 
                         onClick={() => setActiveTab("students")}
-                        className="btn btn-ghost btn-xs text-emerald-800 font-bold hover:bg-emerald-50 rounded-lg"
+                        className="btn btn-ghost btn-xs text-success font-bold hover:bg-success/10 rounded-lg"
                       >
                         View Full Registry →
                       </button>
@@ -222,7 +222,7 @@ function Dashboard() {
                         <tbody>
                           {students.slice(0, 4).map((student) => (
                             <tr key={student.id} className="hover:bg-base-200/20">
-                              <td className="font-mono font-bold text-emerald-800 pl-5 hidden sm:table-cell">{student.id}</td>
+                              <td className="font-mono font-bold text-success pl-5 hidden sm:table-cell">{student.id}</td>
                               <td className="font-semibold pl-4 sm:pl-3">
                                 <div>{student.name}</div>
                                 <div className="flex items-center gap-1 mt-0.5 sm:hidden">
@@ -255,7 +255,7 @@ function Dashboard() {
                               <td className="pr-5 text-right">
                                 <button
                                   onClick={() => handleViewStudent(student)}
-                                  className="btn btn-ghost btn-xs text-emerald-800 hover:bg-emerald-50 hover:text-emerald-950 font-bold rounded-md px-2 cursor-pointer h-6 min-h-6 border border-emerald-100"
+                                  className="btn btn-outline btn-xs btn-success font-bold rounded-md px-3 cursor-pointer h-7 min-h-7"
                                 >
                                   Details
                                 </button>
@@ -269,11 +269,11 @@ function Dashboard() {
 
                   {/* Quick System Action Panel */}
                   <div className="card bg-base-100 shadow-sm border border-base-200 p-5 space-y-4">
-                    <h3 className="font-bold text-sm text-emerald-800">System Utilities (Action Buttons Draft)</h3>
+                    <h3 className="font-bold text-sm text-success">System Utilities (Action Buttons Draft)</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                       <button 
                         onClick={() => showToast("Backup database initialized... (Mock Action)", "info")}
-                        className="btn btn-outline border-base-300 hover:bg-emerald-50 hover:text-emerald-800 hover:border-emerald-600 rounded-xl text-[11px] font-bold h-11 cursor-pointer flex flex-col justify-center gap-0.5"
+                        className="btn btn-outline border-base-300 hover:bg-success/10 hover:text-success hover:border-success rounded-xl text-[11px] font-bold h-11 cursor-pointer flex flex-col justify-center gap-0.5"
                       >
                         <span>💾</span>
                         <span>Backup DB</span>
@@ -292,14 +292,14 @@ function Dashboard() {
                           document.body.removeChild(link);
                           showToast("Exporting registry as CSV report!", "success");
                         }}
-                        className="btn btn-outline border-base-300 hover:bg-emerald-50 hover:text-emerald-800 hover:border-emerald-600 rounded-xl text-[11px] font-bold h-11 cursor-pointer flex flex-col justify-center gap-0.5"
+                        className="btn btn-outline border-base-300 hover:bg-success/10 hover:text-success hover:border-success rounded-xl text-[11px] font-bold h-11 cursor-pointer flex flex-col justify-center gap-0.5"
                       >
                         <span>📊</span>
                         <span>Export CSV</span>
                       </button>
                       <button 
                         onClick={() => window.print()}
-                        className="btn btn-outline border-base-300 hover:bg-emerald-50 hover:text-emerald-800 hover:border-emerald-600 rounded-xl text-[11px] font-bold h-11 cursor-pointer flex flex-col justify-center gap-0.5"
+                        className="btn btn-outline border-base-300 hover:bg-success/10 hover:text-success hover:border-success rounded-xl text-[11px] font-bold h-11 cursor-pointer flex flex-col justify-center gap-0.5"
                       >
                         <span>🖨️</span>
                         <span>Print Page</span>

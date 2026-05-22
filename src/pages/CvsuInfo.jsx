@@ -16,7 +16,7 @@ function CvsuInfo() {
           {/* Vision and Mission Split */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-3">
-              <h3 className="font-bold text-base text-emerald-800 flex items-center gap-2 pb-1.5 border-b border-base-200">
+              <h3 className="font-bold text-base text-success flex items-center gap-2 pb-1.5 border-b border-base-200">
                 <span>🛡️</span> CvSU Vision
               </h3>
               <p className="text-xs text-base-content/70 italic leading-relaxed pl-2 border-l-2 border-emerald-600">
@@ -25,7 +25,7 @@ function CvsuInfo() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-bold text-base text-emerald-800 flex items-center gap-2 pb-1.5 border-b border-base-200">
+              <h3 className="font-bold text-base text-success flex items-center gap-2 pb-1.5 border-b border-base-200">
                 <span>🎯</span> CvSU Mission
               </h3>
               <p className="text-xs text-base-content/70 italic leading-relaxed pl-2 border-l-2 border-emerald-600">
@@ -39,7 +39,7 @@ function CvsuInfo() {
 
           {/* Quality Policy Statement */}
           <div className="space-y-3 bg-emerald-900/5 p-5 sm:p-6 rounded-2xl border border-emerald-900/10">
-            <h3 className="font-bold text-base text-emerald-800 flex items-center gap-2 pb-1.5 border-b border-emerald-900/10">
+            <h3 className="font-bold text-base text-success flex items-center gap-2 pb-1.5 border-b border-emerald-900/10">
               <span>✨</span> CvSU Quality Policy Statement
             </h3>
             <p className="text-xs text-base-content/75 leading-relaxed">
@@ -57,20 +57,20 @@ function CvsuInfo() {
 
           {/* University Core Values */}
           <div className="space-y-3">
-            <h3 className="font-bold text-base text-emerald-800 flex items-center gap-2 pb-1.5 border-b border-base-200">
+            <h3 className="font-bold text-base text-success flex items-center gap-2 pb-1.5 border-b border-base-200">
               <span>💎</span> University Tenets / Core Values
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center mt-2">
               <div className="p-4 rounded-xl border border-base-300 bg-base-50">
-                <p className="text-base font-extrabold text-emerald-800">TRUTH</p>
+                <p className="text-base font-extrabold text-success">TRUTH</p>
                 <p className="text-[10px] text-base-content/50 mt-0.5">Character & Integrity First</p>
               </div>
               <div className="p-4 rounded-xl border border-base-300 bg-base-50">
-                <p className="text-base font-extrabold text-emerald-800">EXCELLENCE</p>
+                <p className="text-base font-extrabold text-success">EXCELLENCE</p>
                 <p className="text-[10px] text-base-content/50 mt-0.5">Quality Academics & Innovation</p>
               </div>
               <div className="p-4 rounded-xl border border-base-300 bg-base-50">
-                <p className="text-base font-extrabold text-emerald-800">SERVICE</p>
+                <p className="text-base font-extrabold text-success">SERVICE</p>
                 <p className="text-[10px] text-base-content/50 mt-0.5">Sustainable Community Engagement</p>
               </div>
             </div>

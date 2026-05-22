@@ -18,7 +18,7 @@ function StudentTable({ students, onView, onEdit, onDelete }) {
     <div className="card bg-base-100 shadow-sm border border-base-200 overflow-hidden">
       <div className="p-5 border-b border-base-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
-          <h2 className="card-title text-base font-bold text-emerald-800">
+          <h2 className="card-title text-base font-bold text-success">
             Student Registry ({students.length})
           </h2>
           <p className="text-xs text-base-content/50 mt-0.5">
@@ -52,7 +52,7 @@ function StudentTable({ students, onView, onEdit, onDelete }) {
               {students.map((student) => (
                 <tr key={student.id} className="hover:bg-base-200/30 transition-colors">
                   {/* ID Column (hidden on mobile, shown on desktop) */}
-                  <td className="font-mono font-bold text-emerald-800 py-4 pl-4 sm:pl-6 hidden md:table-cell">
+                  <td className="font-mono font-bold text-success py-4 pl-4 sm:pl-6 hidden md:table-cell">
                     {student.id}
                   </td>
                   
@@ -60,7 +60,7 @@ function StudentTable({ students, onView, onEdit, onDelete }) {
                   <td className="py-3 pl-4 md:pl-3">
                     <div className="flex items-center gap-2.5">
                       <div className="avatar placeholder hidden xs:flex">
-                        <div className="w-8 h-8 rounded-full bg-emerald-800/10 text-emerald-800 flex items-center justify-center font-bold text-[10px] border border-emerald-800/20">
+                        <div className="w-8 h-8 rounded-full bg-success/10 text-success flex items-center justify-center font-bold text-[10px] border border-success/20">
                           {student.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
                         </div>
                       </div>
@@ -74,7 +74,7 @@ function StudentTable({ students, onView, onEdit, onDelete }) {
                         </div>
                         <div className="text-[10px] text-base-content/40">{student.email}</div>
                         {/* Mobile-only Course & Year description */}
-                        <div className="text-[10px] font-semibold text-emerald-800/80 md:hidden mt-1 flex flex-wrap items-center gap-1">
+                        <div className="text-[10px] font-semibold text-success/80 md:hidden mt-1 flex flex-wrap items-center gap-1">
                           <span>{student.course}</span>
                           <span className="text-base-content/30">•</span>
                           <span className="text-base-content/50">{student.year}</span>
@@ -104,7 +104,7 @@ function StudentTable({ students, onView, onEdit, onDelete }) {
                       {/* View Button */}
                       <button
                         onClick={() => onView(student)}
-                        className="btn btn-ghost btn-xs text-emerald-800 hover:bg-emerald-50 rounded-lg font-bold px-1.5 sm:px-2 cursor-pointer h-7 min-h-7 border border-emerald-200"
+                        className="btn btn-outline btn-xs btn-success font-bold rounded-md px-1.5 sm:px-2 cursor-pointer h-7 min-h-7"
                         title="View Profile Details"
                       >
                         <span>👁️</span>

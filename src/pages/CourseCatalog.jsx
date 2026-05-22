@@ -43,7 +43,7 @@ function CourseCatalog({ students }) {
           <div className="p-6 space-y-4">
             <div className="flex justify-between items-start">
               <div>
-                <span className="badge badge-sm badge-outline font-bold text-emerald-800">
+                <span className="badge badge-sm badge-outline font-bold text-success">
                   {course.code}
                 </span>
                 <h3 className="font-extrabold text-base text-base-content/90 mt-1">
@@ -63,7 +63,7 @@ function CourseCatalog({ students }) {
 
             <div className="flex justify-between items-center text-[10px] font-bold text-base-content/40 uppercase">
               <span>🏛️ {course.dept}</span>
-              <span className="text-emerald-800 font-bold">👥 {course.studentsCount} Enrolled</span>
+              <span className="text-success font-bold">👥 {course.studentsCount} Enrolled</span>
             </div>
           </div>
         </div>

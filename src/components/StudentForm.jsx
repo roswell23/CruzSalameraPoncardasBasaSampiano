@@ -104,7 +104,7 @@ function StudentForm({ onSubmit, currentEditStudent, onCancel }) {
     <div className="card bg-base-100 shadow-md border border-base-200">
       <div className="card-body p-6">
         <div className="flex justify-between items-center mb-4 pb-2 border-b border-base-200">
-          <h2 className="card-title text-base font-bold text-emerald-800 flex items-center gap-2">
+          <h2 className="card-title text-base font-bold text-success flex items-center gap-2">
             <span>{currentEditStudent ? '📝' : '➕'}</span>
             {currentEditStudent ? 'Edit Student Details' : 'Add New Student'}
           </h2>
@@ -264,7 +264,7 @@ function StudentForm({ onSubmit, currentEditStudent, onCancel }) {
                     value="Male"
                     checked={formData.gender === 'Male'}
                     onChange={handleChange}
-                    className="radio radio-primary radio-sm text-emerald-800"
+                    className="radio radio-primary radio-sm text-success"
                   />
                   <span className="label-text text-xs">Male</span>
                 </label>
@@ -275,7 +275,7 @@ function StudentForm({ onSubmit, currentEditStudent, onCancel }) {
                     value="Female"
                     checked={formData.gender === 'Female'}
                     onChange={handleChange}
-                    className="radio radio-primary radio-sm text-emerald-800"
+                    className="radio radio-primary radio-sm text-success"
                   />
                   <span className="label-text text-xs">Female</span>
                 </label>
