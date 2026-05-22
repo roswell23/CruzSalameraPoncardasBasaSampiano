@@ -69,7 +69,7 @@ function LoginPage({ onLogin }) {
               Tanza Campus
             </p>
           </div>
-          <p className="text-emerald-200/60 text-xs max-w-xs mx-auto">
+          <p className="text-emerald-100/80 text-xs max-w-xs mx-auto font-medium">
             Student Management System Portal — Authorized personnel only
           </p>
         </div>
@@ -80,7 +80,7 @@ function LoginPage({ onLogin }) {
           {/* Card Header */}
           <div className="text-center space-y-1">
             <h2 className="text-lg font-bold text-white">Welcome Back</h2>
-            <p className="text-emerald-200/50 text-xs">Sign in to access the student portal</p>
+            <p className="text-emerald-100/75 text-xs font-medium">Sign in to access the student portal</p>
           </div>
 
           {/* Error Alert */}
@@ -96,7 +96,7 @@ function LoginPage({ onLogin }) {
             
             {/* Email Field */}
             <div className="space-y-1.5">
-              <label htmlFor="login-email" className="text-xs font-semibold text-emerald-100/70 pl-1 flex items-center gap-1.5">
+              <label htmlFor="login-email" className="text-xs font-semibold text-emerald-100 pl-1 flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -123,7 +123,7 @@ function LoginPage({ onLogin }) {
 
             {/* Password Field */}
             <div className="space-y-1.5">
-              <label htmlFor="login-password" className="text-xs font-semibold text-emerald-100/70 pl-1 flex items-center gap-1.5">
+              <label htmlFor="login-password" className="text-xs font-semibold text-emerald-100 pl-1 flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
@@ -170,7 +170,7 @@ function LoginPage({ onLogin }) {
             <div className="flex items-center justify-between px-0.5">
               <label className="flex items-center gap-2 cursor-pointer group">
                 <input type="checkbox" className="checkbox checkbox-xs border-white/20 checked:border-yellow-400 [--chkbg:theme(colors.yellow.400)] [--chkfg:theme(colors.emerald.900)]" />
-                <span className="text-xs text-white/40 group-hover:text-white/60 transition-colors font-medium">Remember me</span>
+                <span className="text-xs text-white/60 group-hover:text-white/80 transition-colors font-medium">Remember me</span>
               </label>
               <button type="button" className="text-xs text-yellow-400/60 hover:text-yellow-400 transition-colors font-semibold cursor-pointer">
                 Forgot password?
@@ -208,10 +208,10 @@ function LoginPage({ onLogin }) {
 
         {/* Footer */}
         <div className="text-center mt-6 space-y-2">
-          <p className="text-emerald-300/30 text-[10px] font-medium">
+          <p className="text-emerald-200/60 text-[10px] font-semibold">
             🔒 Secure connection · TLS 1.3 encrypted
           </p>
-          <p className="text-emerald-300/20 text-[10px]">
+          <p className="text-emerald-200/50 text-[10px] font-medium">
             © {new Date().getFullYear()} Cavite State University – Tanza Campus. All rights reserved.
           </p>
         </div>
